@@ -1,0 +1,89 @@
+* {
+    font-family: 'Roboto';
+    box-sizing: border-box;
+    color: hsl(234, 29%, 20%);
+}
+
+.illustration {
+    background-image: url(./../assets/images/illustration-sign-up-mobile.svg);
+    width: 375px;
+    height: 284px;
+    margin: auto;
+}
+
+h1{
+    font-family: RobotoBold;
+    font-size: 40px;
+
+}
+
+.newsletter {
+    padding: 10px;
+    width: 375px;
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+}
+.newsletter p, li {
+    text-align: start;
+    font-size: 17px;
+    width: 90%;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 0 1fr;
+    grid-gap: 2em;
+    align-items: start;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+li::before{
+    content: url(./../assets/images/icon-list.svg);
+}
+
+.form {
+    text-align: left;
+    width: 90%;
+}
+
+input{
+    display: block;
+    width: 100%;
+}
+
+button{
+    background-color: hsl(234, 29%, 20%);
+    color: aliceblue;
+    font-size: 1rem;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: RobotoBold;
+    width: 100%;
+}
+
+input{
+    font-size: 1rem;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: 1px gray solid;
+    border-radius: 10px;
+}
+
+label{
+    font-size: 0.7em;
+    font-family: RobotoBold;
+}
+
+.newsletter-container {
+    width: 375px;
+    margin: auto;
+}
