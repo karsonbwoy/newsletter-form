@@ -1,24 +1,7 @@
-import { useState } from 'react'
 import './Newsletter.css'
-export default function Newsletter({ onClick }) {
+export default function Newsletter({ onClick, onChange, email, isValid }) {
 
-    const [isValid, setIsValid] = useState()
-    const [email, setEmail] = useState('')
-    function handleChange(val) {
-        console.log(val);
-        setEmail(val);
-        setIsValid(ValidateEmail(val));
-        console.log(isValid);
-    }
-
-    function ValidateEmail(mail) 
-    {
-     if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(mail))
-      {
-        return (true)
-      }
-        return (false)
-    }
+    console.log(onChange);
 
     return (
         <div className="container">
@@ -36,7 +19,7 @@ export default function Newsletter({ onClick }) {
                 <div className='form'>
                     <form>
                         <label htmlFor="email-input">Email address</label>
-                        <input className={isValid !== false ? '' : 'invalid'} type="text" id="email-input" placeholder="email@company.com" onChange={e => handleChange(e.target.value)} value={email}></input>
+                        <input className={isValid !== false ? '' : 'invalid'} type="text" id="email-input" placeholder="email@company.com" onChange={e => onChange(e.target.value)} value={email}></input>
                         <button disabled = {true && !isValid} onClick={e => onClick(e)}>Subscribe to monthly newsletter</button>
                     </form>
                 </div>
