@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Newsletter.css'
-export default function Newsletter() {
+export default function Newsletter({ onClick }) {
 
     const [isValid, setIsValid] = useState()
     const [email, setEmail] = useState('')
@@ -37,7 +37,7 @@ export default function Newsletter() {
                     <form>
                         <label htmlFor="email-input">Email address</label>
                         <input className={isValid !== false ? '' : 'invalid'} type="text" id="email-input" placeholder="email@company.com" onChange={e => handleChange(e.target.value)} value={email}></input>
-                        <button disabled = {true && !isValid} >Subscribe to monthly newsletter</button>
+                        <button disabled = {true && !isValid} onClick={e => onClick(e)}>Subscribe to monthly newsletter</button>
                     </form>
                 </div>
             </div>
